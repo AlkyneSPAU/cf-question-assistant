@@ -1,0 +1,12 @@
+{
+    "username": "AlkyneTrp",
+    "size": [400,250],
+    "title": "刷题小助手",
+    "fontFamily": "SimHei",
+    "fontSize": 16,
+    "fontBold": 1,
+    "target": 3,
+    "alpha": 0.7,
+    "topMost": 0,
+    "highContrast": 0
+}
