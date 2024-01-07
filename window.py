@@ -40,7 +40,8 @@ class Window:
         self.fontBold = settings['fontBold']
         self.result = tk.StringVar(master=self.window)
         # 窗体基本信息
-        self.window.geometry(f"{settings['size'][0]}x{settings['size'][1]}")
+        self.window.geometry(f"{settings['size'][0]}x{settings['size'][1]}"
+                             f"+{settings['position'][0]}+{settings['position'][1]}")
         self.window.title(settings['title'])
         # 窗体额外信息(表现为特殊窗口)
         self.window.attributes('-alpha', settings['alpha'])
@@ -50,10 +51,13 @@ class Window:
         self.label = tk.Label(self.window, font=(self.fontFamily, self.fontSize))
         self.label.pack(side=TOP)
         self.refresh = tk.Button(self.window, text='刷新', command=lambda: [
-            # getData(),
+            getData(settings['username']),
             self.result.set(Process()),
             change(self.label, self.result)
         ])
+        getData(settings['username'])
+        self.result.set(Process())
+        change(self.label, self.result)
         self.refresh.pack(side=BOTTOM)
         # 保持窗口运行
         self.window.mainloop()

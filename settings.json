@@ -1,6 +1,7 @@
 {
     "username": "AlkyneTrp",
-    "size": [400,250],
+    "size": [400,200],
+    "position": [1500,810],
     "title": "刷题小助手",
     "fontFamily": "SimHei",
     "fontSize": 16,

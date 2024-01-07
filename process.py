@@ -23,7 +23,7 @@ def Process() -> str:
     for elem in var:
         if elem['When'].split()[0] != time.strftime('%b/%d/%Y'):
             continue
-        if elem['Verdict'] != 'Accepted':
+        if elem['Verdict'] not in ['Accepted', 'Happy New Year!']:
             continue
         finished += 1
 
